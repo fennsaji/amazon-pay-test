@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AmazonPayTest</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="/assets/pay-with-amazon.min.js"></script>
+  <!-- <script type='text/javascript'>
+    window.onAmazonLoginReady = function() {
+      amazon.Login.setClientId('Client-ID-xxx');
+    };
+  </script> -->
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    var payWithAmazon = new PayWithAmazon({
+      sellerId: 'ABC',
+      clientId: 'XYZ',
+      button: 'pay-with-amazon',
+      wallet: 'wallet',
+      consent: 'consent'
+    });
+  </script>
+</body>
+<!-- <script async='async' type='text/javascript'
+    src='https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js'>
+  </script> -->
+</html>
